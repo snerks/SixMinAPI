@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace SixMinAPI.Data
+namespace SixMinApi.Data
 {
     public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {

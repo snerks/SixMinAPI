@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace SixMinAPI.Dtos
+namespace SixMinApi.Dtos
 {
     public class CommandCreateDto
     {

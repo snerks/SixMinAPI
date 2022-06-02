@@ -1,6 +1,6 @@
-using SixMinAPI.Models;
+using SixMinApi.Models;
 
-namespace SixMinAPI.Data
+namespace SixMinApi.Data
 {
     public interface ICommandRepo
     {

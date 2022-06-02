@@ -1,4 +1,4 @@
-namespace SixMinAPI.Dtos
+namespace SixMinApi.Dtos
 {
     public class CommandReadDto
     {
