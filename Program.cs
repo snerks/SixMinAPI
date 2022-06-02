@@ -32,24 +32,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// string[]? summaries = new[]
-// {
-//     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-// };
-
-// app.MapGet("/weatherforecast", () =>
-// {
-//     return (WeatherForecast[])Enumerable.Range(1, 5).Select(index =>
-//         new WeatherForecast
-//         (
-//             DateTime.Now.AddDays(index),
-//             Random.Shared.Next(-20, 55),
-//             summaries[Random.Shared.Next(summaries.Length)]
-//         ))
-//         .ToArray();
-// })
-// .WithName("GetWeatherForecast");
-
 app.MapGet("api/v1/commands", async (ICommandRepo repo, IMapper mapper) =>
 {
     global::System.Collections.Generic.IEnumerable<global::SixMinApi.Models.Command>? commands = await repo.GetAllCommands();
@@ -105,8 +87,3 @@ app.MapDelete("api/v1/commands/{id}", async (ICommandRepo repo, int id) =>
 });
 
 app.Run();
-
-// internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-// {
-//     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-// }
